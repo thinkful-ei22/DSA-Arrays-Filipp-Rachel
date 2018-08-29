@@ -84,3 +84,17 @@ function main() {
 }
 
 main();
+
+// 1. What is the length, capacity and memory address of your array?
+// Array { length: 1, _capacity: 3, ptr: 0 }
+
+// 2. What is the length, capacity and memory address of your array? Explain the result of your program after adding the new lines of code
+// Array { length: 6, _capacity: 12, ptr: 3 } 
+// the capaticy changed because we hit the limit, so our pointer changed to point to the new address.
+
+// 3. What is the length, capacity and address of your array? Explain the result of your program after adding the new lines of code
+// Array { length: 3, _capacity: 12, ptr: 3 }
+// the capacity is 12 because be increased the capaticy previously. But the length is 3 because we removed 3 items.
+
+// 4. Print this one item that you just added. What is the result? Can you explain your result?
+// NaN
