@@ -71,3 +71,49 @@
 // }
 
 // console.log(arrayMerger([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
+
+//Remove Characters//
+
+// function removeCharacters(str,char) {
+//   let newStr = '';
+//   for (let i=0; i < str.length; i++) {
+//     let inserted = true;
+//     for (let j=0; j < char.length; j++) {
+//       if (str[i] === char[j]) {
+//         inserted = false;
+//       };   
+//     };
+//     if (inserted === true) {
+//       newStr += str[i];
+//     };
+//   };
+//   return newStr;
+// };
+
+// console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+
+//~~Products~~//
+
+/* 
+1: 3*9*4 = 108
+3: 1*9*4 = 36
+9: 1*3*4 = 12
+4: 1*3*9 = 27
+*/
+
+function products(arr) {
+  let resultArr = [];
+  for(let i=0; i < arr.length; i++) {
+    let ignoredIndex = i;
+    let runningTotal = 1;
+    for(let j=0; j < arr.length; j++) {
+      if (ignoredIndex !== j) {
+        runningTotal *= arr[j];
+      };
+    };
+    resultArr.push(runningTotal);
+  };
+  return resultArr;
+};
+
+console.log(products([1, 3, 9, 4]))
